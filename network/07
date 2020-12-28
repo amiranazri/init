@@ -1,0 +1,5 @@
+nslookup slash16.org
+
+#Most DNS servers reference external servers (i.e. google 8.8.8.8 and 4.4.4.4 etc) in their record configurations.
+
+#/etc/resolv.conf --> changed server name to 8.8.8.8

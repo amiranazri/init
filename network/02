@@ -1,0 +1,14 @@
+ifconfig
+
+ether 48:d7:05:bc:29:07
+broadcast 192.168.101.255
+netmask 0xffffff00
+
+/*This command displays all the devices conencted to our subnet*/
+arp -a
+
+? (192.168.101.1) at 48:8f:5a:4a:8c:5d on en0 ifscope [ethernet]
+? (192.168.101.202) at b8:c6:aa:ff:35:ab on en0 ifscope [ethernet]
+? (192.168.101.217) at 98:5a:eb:e1:7a:da on en0 ifscope [ethernet]
+? (224.0.0.251) at 1:0:5e:0:0:fb on en0 ifscope permanent [ethernet]
+? (239.255.255.250) at 1:0:5e:7f:ff:fa on en0 ifscope permanent [ethernet]

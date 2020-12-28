@@ -1,0 +1,5 @@
+ipconfig getpacket en0
+
+/*server_identifier (dhcp) and domain_name_server are the same thing*/
+
+server_identifier (ip): 192.168.101.1

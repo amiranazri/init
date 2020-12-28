@@ -1,0 +1,2 @@
+The Hosts file
+The Domain Name System and its associated cache is your Mac's standard way of knowing how to get to where it's going on the Internet, but there's another file that can be very useful. It's called the Hosts file, and it can be used to override the default DNS information. This can be found in /etc/hosts

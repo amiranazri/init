@@ -1,0 +1,14 @@
+nslookup slash16.org
+
+Server:		192.168.101.1
+Address:	192.168.101.1#53
+
+Non-authoritative answer:
+Name:	slash16.org
+Address: 13.225.84.69
+Name:	slash16.org
+Address: 13.225.84.89
+Name:	slash16.org
+Address: 13.225.84.84
+Name:	slash16.org
+Address: 13.225.84.228
