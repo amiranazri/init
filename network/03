@@ -1,3 +1,2 @@
-ifconfig
-
+ifconfig -a
 ether 82:0d:78:61:00:00
