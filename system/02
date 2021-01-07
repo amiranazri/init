@@ -1,1 +1,1 @@
-scutil --set ComputerName <newname>
+sudo hostname <newhostname>

@@ -1,0 +1,14 @@
+##first list the process id.
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1 225740  9396 ?        Ss   12:59   0:04 /sbin/init splash
+##then find the ones that mention sshd
+ps -aux | grep "sshd"
+##of thos one should be the grep command itself and the other run by the user root will be  path to a binary for sshd. 
+root     12539  0.0  0.0  72296  5704 ?        Ss   21:37   0:00 /usr/sbin/sshd -D
+stieky   12812  0.0  0.0  14424   996 pts/2    S+   21:47   0:00 grep --color=auto sshd
+## the process id is 12539
+## to double check
+kill 12539
+## then check systemctl if its not running
+sudo systemctl status sshd
+#$ or you could just do that to begin withbecause ti list the process id there

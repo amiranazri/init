@@ -1,0 +1,7 @@
+## edit with sudo vi ##
+/etc/hosts
+##change on line 2 what follows 127.0.0.1 to reflect chosen hostname
+/etc/hostname
+##there should just be the hostname there. change that to reflect chosen hostnmae
+##restart systemctl hosname
+sudo systemctl restart hostname
