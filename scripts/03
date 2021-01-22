@@ -1,11 +1,58 @@
 #!/bin/bash
+commands=("-createUser" "-updatePassword" "-checkUptime" "-loginAngryEmployee" "-generateSSHKeyOnUser")
 
-chars="/-\|"
+function checkCommands() {
+    isValidCommand=false
+    for command in "${commands[@]}"; do
+        if [ "$command" = "$1" ]; then
+            actualCommand="$command"
+            isValidCommand=true
+        fi
+    done
+}
 
-while :; do
-  for (( i=0; i<${#chars}; i++ )); do
-    sleep 0.5
-    echo -en "${chars:$i:1}" "\r"
-  done
-done
+function createUser() {
+    addUser $2
+}
 
+function updatePassword() {
+    passwd $2
+}
+
+function checkUptime() {
+    w
+}
+function loginAngryEmployee() {
+    su $2
+}
+
+function generateSSHKeyOnUser() {
+    mkdir -p ~/.ssh;ssh-keygen;
+    sudo -H -u $2 bash -c 'mkdir -p ~/.ssh;ssh-keygen;'
+}
+
+checkCommands "$@"
+
+if [ -n "$1" ] && [ $isValidCommand ]; then
+    if [ "$actualCommand" = "${commands[0]}" ]; then
+        createUser "$@"
+    fi
+    if [ "$actualCommand" = "${commands[1]}" ]; then
+        updatePassword "$@"
+    fi
+    if [ "$actualCommand" = "${commands[2]}" ]; then
+        checkUptime "$@"
+    fi
+    if [ "$actualCommand" = "${commands[3]}" ]; then
+        loginAngryEmployee "$@"
+    fi
+    if [ "$actualCommand" = "${commands[4]}" ]; then
+        generateSSHKeyOnUser "$@"
+    fi
+else
+    printf "Invalid command!! Valid commands:
+        -createUser
+        -updatePassword
+        -checkUpTime
+    "
+fi
