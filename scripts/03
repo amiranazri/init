@@ -12,7 +12,7 @@ function checkCommands() {
 }
 
 function createUser() {
-    addUser $2
+    adduser $2
 }
 
 function updatePassword() {
@@ -54,5 +54,7 @@ else
         -createUser
         -updatePassword
         -checkUpTime
+		-loginAngryEmployee
+		-generateSSHKeyOnUser
     "
 fi
