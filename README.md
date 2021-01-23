@@ -1,2 +1,2 @@
 # init
-École 42 Dev Ops project done with @dstiekem, @anorman, and @zhelms
+École 42 Dev Ops project done with @dstiekem, @anorman, and @zhelm
