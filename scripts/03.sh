@@ -602,7 +602,7 @@ function sectionThree() {
             ANSWER:
             This Script is question 3
             ${NC}"
-                bash question3.sh -init
+                bash 03.sh -init
                 sleep 2
             fi
         elif [ "$sectionThreeNumber" = "b" ]; then
